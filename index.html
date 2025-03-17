@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Personal Portfolio | M A K</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="scripts.js"></script>
 </head>
 
 <body>
+    <!-- Navigation Bar -->
     <nav>
         <a href="#" class="brand">M A K</a>
         <ul>
@@ -17,37 +18,50 @@
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="resume.pdf" class="resume-btn" target="_blank">Resume</a></li>
         </ul>
     </nav>
 
-    <section id="home" class="fade-in">
-        <div class="content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>A showcase of my skills and projects.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <!-- Avatar -->
+        <div class="avatar-container">
+            <img src="avatar.jpg" alt="Your Avatar" class="avatar">
+        </div>
+        <div class="hero-content">
+            <h1>Hey, I'm <span class="highlight">M A K</span></h1>
+            <p>Building AI, Backend, and Scalable Systems.</p>
+            <div class="buttons">
+                <a href="https://github.com/yourprofile" class="btn">Explore My Work</a>
+                <a href="https://linkedin.com/in/yourprofile" class="btn">Connect on LinkedIn</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span>↓ Scroll Down</span>
         </div>
     </section>
 
-    <section id="about" class="fade-in">
+    <!-- Other Sections -->
+    <section id="about">
         <div class="content">
             <h2>About Me</h2>
-            <p>I am a passionate developer with expertise in web technologies.</p>
+            <p>I am a passionate developer with expertise in AI and backend development.</p>
         </div>
     </section>
 
-    <section id="projects" class="fade-in">
+    <section id="projects">
         <div class="content">
             <h2>Projects</h2>
             <p>Here are some of my recent works.</p>
         </div>
     </section>
 
-    <section id="contact" class="fade-in">
+    <section id="contact">
         <div class="content">
             <h2>Contact Me</h2>
             <p>Feel free to reach out via email or social media.</p>
         </div>
     </section>
-
 </body>
 
 </html>
