@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     color: #EDEDED;
-    background: linear-gradient(135deg, #1B4332, #2D6A4F);
+    background-image: url('images/paper_green_bg.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -26,7 +26,7 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 3px solid #80ED99;
+    border: 3px solid #FFA500;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     object-fit: cover;
     animation: fadeIn 1.5s ease-in-out;
@@ -47,7 +47,7 @@ body {
 
 /* Navigation Bar */
 nav {
-    background: #081C15;
+    background: rgba(0, 51, 25, 0.8);
     color: white;
     position: fixed;
     width: 100%;
@@ -66,7 +66,7 @@ nav {
     font-size: 32px;
     font-weight: bold;
     font-family: 'Caveat', cursive;
-    color: #80ED99;
+    color: #FFA500;
     text-decoration: none;
     transition: 0.3s ease-in-out;
     animation: pulse 1.5s infinite alternate;
@@ -114,7 +114,7 @@ nav ul li a::after {
     position: absolute;
     width: 100%;
     height: 3px;
-    background: #80ED99;
+    background: #FFA500;
     left: 0;
     bottom: -4px;
     transform: scaleX(0);
@@ -127,15 +127,15 @@ nav ul li a:hover::after {
 
 /* Resume Button */
 .resume-btn {
-    background: #80ED99;
-    color: #081C15;
+    background: #FFA500;
+    color: #003319;
     padding: 10px 15px;
     border-radius: 5px;
     transition: 0.3s;
 }
 
 .resume-btn:hover {
-    background: #52B788;
+    background: #FFD700;
 }
 
 /* Hero Section */
@@ -146,15 +146,18 @@ nav ul li a:hover::after {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #2D6A4F, #081C15);
     color: white;
     position: relative;
+    background: rgba(0, 51, 25, 0.5);
+    /* background: rgba(0, 91, 44, 0.3); */
+    padding: 50px;
+    border-bottom: 4px solid #FFA500;
 }
 
 .hero-content h1 {
     font-size: 42px;
     font-family: 'Pacifico', cursive;
-    color: #80ED99;
+    color: #FFD700;
 }
 
 .hero-content p {
@@ -163,7 +166,7 @@ nav ul li a:hover::after {
 }
 
 .highlight {
-    color: #52B788;
+    color: #FFA500;
 }
 
 /* CTA Buttons */
@@ -173,8 +176,8 @@ nav ul li a:hover::after {
 }
 
 .btn {
-    background: #80ED99;
-    color: #081C15;
+    background: #FFA500;
+    color: #003319;
     padding: 12px 20px;
     font-size: 18px;
     border-radius: 8px;
@@ -183,7 +186,7 @@ nav ul li a:hover::after {
 }
 
 .btn:hover {
-    background: #52B788;
+    background: #FFD700;
 }
 
 /* Scroll Down Animation */
@@ -191,7 +194,7 @@ nav ul li a:hover::after {
     position: absolute;
     bottom: 20px;
     font-size: 16px;
-    color: #80ED99;
+    color: #FFA500;
     animation: bounce 2s infinite;
 }
 
@@ -229,14 +232,12 @@ nav ul li a:hover::after {
     }
 }
 
-/* About Section */
-#about {
-    background: linear-gradient(135deg, #1B4332, #80ED99);
-    color: white;
-}
 
 /* About Section Styling */
 .about-section {
+    background: rgba(0, 91, 44, 0.3);
+    /* background: rgba(0, 51, 25, 0.5); */
+    color: white;
     padding: 80px 20px;
     min-height: 100vh;
     display: flex;
@@ -244,5 +245,5 @@ nav ul li a:hover::after {
     justify-content: center;
     text-align: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    border-bottom: 4px solid #1B4332;
+    border-bottom: 4px solid #FFA500;
 }
