@@ -5,63 +5,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio | M A K</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script defer src="scripts.js"></script>
 </head>
 
 <body>
+
+
     <!-- Navigation Bar -->
     <nav>
         <a href="#" class="brand">M A K</a>
-        <ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="resume.pdf" target="_blank" class="resume-btn">Resume</a></li>
         </ul>
     </nav>
 
+
+
+
+    
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <!-- Avatar -->
-        <!-- <div class="avatar-container">
-            <img src="images/avatar.jpg" alt="Your Avatar" class="avatar">
-        </div> -->
         <div class="hero-content">
-            <h1>Hey, I'm <span class="highlight">M A K</span></h1>
-            <p>Building AI, Backend, and Scalable Systems.</p>
+            <h1>Hi !<br> I'm <span class="highlight">Mubasshir Khan</span></h1>
+            <p style="font-size: 35px; ">I do Backend...</p>
             <div class="buttons">
                 <a href="https://github.com/yourprofile" class="btn">Explore My Work</a>
                 <a href="https://linkedin.com/in/yourprofile" class="btn">Connect on LinkedIn</a>
             </div>
         </div>
-        <div class="scroll-down">
+        <!-- <div class="scroll-down">
             <span>↓ Scroll Down</span>
-        </div>
+        </div> -->
     </section>
 
-    <!-- Other Sections -->
+
+
+
+
+    <!-- About Section -->
     <section id="about" class="about-section">
         <div class="content">
-            <h2>About Me</h2>
-            <p>I am a passionate developer with expertise in AI and backend development.</p>
+            <h2>About</h2>
+            <div class="about-grid">
+                
+                <div class="about-card" data-modal="tech-stack">
+                    <h3>Tech Stack</h3>
+                    <i class="fas fa-code"></i>
+                </div>
+                
+                <div class="about-card" data-modal="leetcode">
+                    <h3>LeetCode</h3>
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                
+                <div class="about-card" data-modal="resume">
+                    <h3>Resume</h3>
+                    <i class="fas fa-file-alt"></i>
+                </div>
+            </div>
         </div>
     </section>
 
+
+
+    <!-- Projects Section -->
     <section id="projects" class="project-section">
         <div class="content">
-            <h2>Projects</h2>
-            <p>Here are some of my recent works.</p>
+            <!-- <h2>Projects</h2> -->
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project1.jpg" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Recommendation System</h3>
+                        <p>Personalized content recommendation engine using deep learning.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project2.jpg" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Scalable Backend</h3>
+                        <p>High-performance system handling 10,000+ requests per second.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project2.jpg" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Scalable Backend</h3>
+                        <p>High-performance system handling 10,000+ requests per second.</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="collaboration">
+                <h3>Let's Do It Together</h3>
+                <p>Ideas yet to implement - wanna work on it together? I would love to be a part of it!</p>
+                <a href="#contact" class="btn">Contact Me</a>
+            </div>
         </div>
     </section>
 
+
+
+
+<!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="content">
             <h2>Contact Me</h2>
-            <p>Feel free to reach out via email or social media.</p>
+            <div class="contact-container">
+                <!-- Left Side: Form -->
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+
+                <!-- Right Side: Let's Connect -->
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p class="fun-fact">I love building cool projects and talking tech.  
+                    Let's create something amazing together!</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+
+
+
+    <footer>
+        <div class="footer-section">
+            <p>&copy; 2025 M.A.K. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+<!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Modal Title</h2>
+            <div id="modal-body">Modal content goes here</div>
+        </div>
+    </div>
 </body>
 
 </html>
