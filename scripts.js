@@ -133,3 +133,111 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.querySelector(".contact-form");
+
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Stop form from submitting normally
+
+        const name = contactForm.querySelector('input[type="text"]').value.trim();
+        const email = contactForm.querySelector('input[type="email"]').value.trim();
+        const message = contactForm.querySelector('textarea').value.trim();
+
+        const emailValidation = validateEmail(email);
+        if (emailValidation !== true) {
+            alert(emailValidation);
+            return;
+        }
+
+        if (!validateMessage(message)) {
+            alert("Message should be between 10 and 1000 characters.");
+            return;
+        }
+
+        if (!canSendMessage()) {
+            alert("You have reached the maximum number of messages (3) in 24 hours. Please try again later.");
+            return;
+        }
+
+        // Send email
+        sendEmail(name, email, message);
+    });
+});
+
+function validateEmail(email) {
+    const generalEmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+$/i;
+    const validDomainRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|org|in|co|edu|gov|io|me|info)$/i;
+
+    if (!generalEmailRegex.test(email)) {
+        return "Please enter a valid email address (e.g., user@example.com)";
+    }
+
+    if (!validDomainRegex.test(email)) {
+        return "Please use a valid email address (e.g., .com, .in, .net)";
+    }
+
+    return true; // Email is valid
+}
+
+function validateMessage(message) {
+    return message.length >= 10 && message.length <= 1000;
+}
+
+function canSendMessage() {
+    const data = JSON.parse(localStorage.getItem("messageData"));
+
+    if (!data) return true; // No data yet, allow sending
+
+    const { count, firstSentAt } = data;
+    const now = Date.now();
+
+    // If more than 24 hours passed since first message, reset
+    if (now - firstSentAt > 24 * 60 * 60 * 1000) {
+        localStorage.removeItem("messageData");
+        return true;
+    }
+
+    return count < 3; // Allow only if count < 3
+}
+
+function incrementMessageCount() {
+    let data = JSON.parse(localStorage.getItem("messageData"));
+
+    if (!data) {
+        data = { count: 1, firstSentAt: Date.now() };
+    } else {
+        data.count += 1;
+    }
+
+    localStorage.setItem("messageData", JSON.stringify(data));
+}
+
+function sendEmail(name, email, message) {
+    const sendButton = document.querySelector('.contact-form button');
+    sendButton.disabled = true;
+    sendButton.innerText = "Sending...";
+
+    emailjs.send('service_57tmzog', 'template_50z4ier', {
+        from_name: name,
+        from_email: email,
+        message: message
+    })
+    .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        alert("Message sent successfully!");
+        incrementMessageCount(); // Update count after sending
+        sendButton.innerText = "Message Sent!";
+    }, function(error) {
+        console.log('FAILED...', error);
+        alert("Failed to send message. Please try again later.");
+        sendButton.disabled = false;
+        sendButton.innerText = "Send Message";
+    });
+
+    setTimeout(() => {
+        sendButton.disabled = false;
+        sendButton.innerText = "Send Another Message";
+    }, 15000); // 15 seconds
+}
