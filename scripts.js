@@ -35,11 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function showModalContent(type) {
         switch (type) {
             
-            // case 'tech-stack':
-            //     modalTitle.textContent = 'Tech Stack';
-            //     modalBody.innerHTML = '<ul><li>Python, Java</li><li>Flask, Spring Boot</li><li>React, MongoDB, MySQL</li><li>AWS, Docker</li></ul>';
-            //     break;
-
+//techstack card
             case 'tech-stack':
                 modalTitle.textContent = 'Tech Stack';
                 modalBody.innerHTML = `
@@ -114,15 +110,124 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
 
 
-            // case 'codechef':
-            //     modalTitle.textContent = '3★ @Codechef';
-            //     modalBody.innerHTML = 'Competitive programmer with a 3-star rating on Codechef.';
-            //     break;
+
+
+//leetcode card
             case 'leetcode':
-                modalTitle.textContent = 'LeetCode';
-                modalBody.innerHTML = '500+ problems solved across arrays, trees, dynamic programming, and more.';
-                break;
+                modalTitle.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <i class="fab fa-leetcode text-orange-500 text-xl"></i>
+                        <div class="-mt-1">
+                            <h3 class="modal-title">LeetCode Stats</h3>
+                            <a href="https://leetcode.com/Mubasshir_Khan" target="_blank" 
+                               class="text-xs text-accent hover:underline flex items-center gap-1">
+                                @Mubasshir_Khan <i class="fas fa-external-link-alt text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                
+                modalBody.innerHTML = `
+                    <div class="leetcode-stats-container space-y-5">
+                        <div class="text-center py-4">
+                            <div class="leetcode-loader animate-pulse">
+                                <i class="fab fa-leetcode text-4xl text-orange-400"></i>
+                                <div class="mt-2 text-sm">Loading your stats...</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
             
+                fetch("https://leetcode-stats-api.herokuapp.com/Mubasshir_Khan")
+                    .then(res => res.json())
+                    .then(data => {
+                        document.querySelector(".leetcode-stats-container").innerHTML = `
+                            <!-- Horizontal Stats Row -->
+                            <div class="flex items-center justify-between bg-gray-800/50 p-4 rounded-lg mb-6">
+                                <div class="text-center px-2">
+                                    <div class="text-2xl font-bold">${data.totalSolved}</div>
+                                    <div class="text-xs opacity-80 uppercase tracking-wider">Solved</div>
+                                </div>
+                                
+                                <div class="h-12 w-px bg-gray-600"></div>
+                                
+                                <div class="text-center px-2">
+                                    <div class="text-2xl font-bold">${Math.round(data.acceptanceRate)}%</div>
+                                    <div class="text-xs opacity-80 uppercase tracking-wider">Accuracy</div>
+                                </div>
+                                
+                                <div class="h-12 w-px bg-gray-600"></div>
+                                
+                                <div class="text-center px-2">
+                                    <div class="text-2xl font-bold">${data.ranking ? data.ranking.toLocaleString() : "N/A"}</div>
+                                    <div class="text-xs opacity-80 uppercase tracking-wider">Ranking</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Difficulty Breakdown -->
+                            <div class="leetcode-section">
+                                <h4 class="leetcode-section-title">
+                                    <i class="fas fa-layer-group text-accent"></i>
+                                    Problem Breakdown
+                                </h4>
+                                <div class="grid grid-cols-3 gap-3">
+                                    <div class="leetcode-difficulty-card difficulty-easy">
+                                        <div class="difficulty-label">Easy</div>
+                                        <div class="difficulty-value">${data.easySolved}</div>
+                                        <div class="difficulty-bar">
+                                            <div class="difficulty-progress" style="width: ${(data.easySolved/data.totalSolved)*100}%"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="leetcode-difficulty-card difficulty-medium">
+                                        <div class="difficulty-label">Medium</div>
+                                        <div class="difficulty-value">${data.mediumSolved}</div>
+                                        <div class="difficulty-bar">
+                                            <div class="difficulty-progress" style="width: ${(data.mediumSolved/data.totalSolved)*100}%"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="leetcode-difficulty-card difficulty-hard">
+                                        <div class="difficulty-label">Hard</div>
+                                        <div class="difficulty-value">${data.hardSolved}</div>
+                                        <div class="difficulty-bar">
+                                            <div class="difficulty-progress" style="width: ${(data.hardSolved/data.totalSolved)*100}%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Badges Section -->
+                            <div class="leetcode-section">
+                                <h4 class="leetcode-section-title">
+                                    <i class="fas fa-award text-accent"></i>
+                                    Badges
+                                </h4>
+                                <div class="flex justify-center py-4">
+                                    <img src="images/batches.jpg" 
+                                         alt="LeetCode Badges" 
+                                         class="leetcode-badge-image rounded-lg border border-accent/20">
+                                </div>
+                            </div>
+                            
+                        `;
+                    })
+                    .catch(error => {
+                        document.querySelector(".leetcode-stats-container").innerHTML = `
+                            <div class="leetcode-error">
+                                <i class="fas fa-exclamation-triangle text-3xl text-red-400"></i>
+                                <h4>Data Loading Failed</h4>
+                                <p>Couldn't fetch LeetCode stats. Please try again later.</p>
+                                <a href="https://leetcode.com/Mubasshir_Khan" target="_blank" 
+                                   class="leetcode-view-more-btn mt-3">
+                                    View Profile Directly
+                                </a>
+                            </div>
+                        `;
+                    });
+                break;
+
+
             case 'resume':
                 modalTitle.textContent = 'Resume';
                 modalBody.innerHTML = '<a href="resume.pdf" target="_blank" class="btn">View My Resume</a>';
@@ -135,6 +240,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
+
+
+
+//contact form
 document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.querySelector(".contact-form");
 
