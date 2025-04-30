@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 modalBody.innerHTML = `
                     <div class="smallsubtext flex flex-col gap-4 pb-8">
 
-                        <!-- Languages -->
+                        <!-- Programming Languages -->
                         <h4 style="opacity: 1;">Programming Languages</h4>
                         <p class="flex flex-row flex-wrap items-center gap-2" style="opacity: 1;">
                             <img class="rounded-xl" src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
@@ -49,63 +49,67 @@ document.addEventListener('DOMContentLoaded', function () {
                             <img class="rounded-xl" src="https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
                         </p>
 
-                        <!-- Frameworks & Technologies -->
-                        <h4 style="opacity: 1;">Frameworks & Technologies</h4>
+                        <!-- Web Development -->
+                        <h4 style="opacity: 1;">Web Development</h4>
                         <p class="flex flex-row flex-wrap items-center gap-2" style="opacity: 1;">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/Flask-000000.svg?style=for-the-badge&logo=flask&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/Spring%20Boot-6DB33F.svg?style=for-the-badge&logo=spring-boot&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/REST%20APIs-0052CC.svg?style=for-the-badge&logo=apachespark&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Jinja-B41717?style=for-the-badge&logo=jinja&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/JSP-007396?style=for-the-badge&logo=java&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Servlets-2E2E2E?style=for-the-badge&logo=java&logoColor=white">
                         </p>
 
-                        <!-- Web Technologies -->
-                        <h4 style="opacity: 1;">Web Technologies</h4>
+                        <!-- Backend / Frameworks -->
+                        <h4 style="opacity: 1;">Backend / Frameworks</h4>
                         <p class="flex flex-row flex-wrap items-center gap-2" style="opacity: 1;">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/JSP-007396.svg?style=for-the-badge&logo=java&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/Servlets-323330.svg?style=for-the-badge&logo=java&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Spring%20Boot-6DB33F.svg?style=for-the-badge&logo=spring-boot&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/REST_API-0052CC?style=for-the-badge&logo=apachespark&logoColor=white">
+                        </p>
+
+                        <!-- Cloud -->
+                        <h4 style="opacity: 1;">Cloud</h4>
+                        <p class="flex flex-row flex-wrap items-center gap-2" style="opacity: 1;">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white">
                         </p>
 
                         <!-- Databases -->
                         <h4 style="opacity: 1;">Databases</h4>
                         <p class="flex flex-row flex-wrap items-center gap-2" style="opacity: 1;">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/MongoDB-4EA94B.svg?style=for-the-badge&logo=mongodb&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=postgresql&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/SQLAlchemy-336791.svg?style=for-the-badge&logo=sqlalchemy&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white">
                         </p>
 
-                        <!-- AI/ML Models -->
-                        <h4 style="opacity: 1;">AI/ML Models</h4>
+                        <!-- AI / ML -->
+                        <h4 style="opacity: 1;">AI / ML</h4>
                         <p class="flex flex-row flex-wrap items-center gap-2" style="opacity: 1;">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/YOLO-FF4088.svg?style=for-the-badge&logo=yolo&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/OpenCV-5C3EE8.svg?style=for-the-badge&logo=opencv&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/TensorFlow-FF6F00.svg?style=for-the-badge&logo=tensorflow&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white">
                         </p>
 
-                        <!-- Tools -->
-                        <h4 style="opacity: 1;">Tools</h4>
+                        <!-- Version Control & Tools -->
+                        <h4 style="opacity: 1;">Version Control & Tools</h4>
                         <p class="flex flex-row flex-wrap items-center gap-2" style="opacity: 1;">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/Git-F05032.svg?style=for-the-badge&logo=git&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=github&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/Maven-C71A36.svg?style=for-the-badge&logo=apachemaven&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/Apache%20Tomcat-F8DC75.svg?style=for-the-badge&logo=apachetomcat&logoColor=black">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/VS%20Code-007ACC.svg?style=for-the-badge&logo=visualstudiocode&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/IntelliJ%20IDEA-000000.svg?style=for-the-badge&logo=intellijidea&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/Postman-FF6C37.svg?style=for-the-badge&logo=postman&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/Spring%20Tool%20Suite-6DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/Eclipse-2C2255.svg?style=for-the-badge&logo=eclipseide&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Apache_Tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=black">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white">
+                            <img class="rounded-xl" src="https://img.shields.io/badge/Spring_Tool_Suite-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
                         </p>
-
-
-                        
-                        <!-- Soft Skills 
-                        <h4 style="opacity: 1;">Soft Skills</h4>
-                        <p class="flex flex-row flex-wrap items-center gap-2" style="opacity: 1;">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/Problem%20Solving-0066CC.svg?style=for-the-badge&logo=thinkpad&logoColor=white">
-                            <img class="rounded-xl" src="https://img.shields.io/badge/Communication-800080.svg?style=for-the-badge&logo=hackthebox&logoColor=white">
-                        </p>-->
 
                     </div>
-
                 `;
                 break;
 
@@ -114,13 +118,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //leetcode card
             case 'leetcode':
+                // Manual data fallback
+                const manualData = {
+                    totalSolved: 330,
+                    easySolved: 124,
+                    mediumSolved: 181,
+                    hardSolved: 15,
+                    acceptanceRate: 68.81,
+                    ranking: 289440
+                };
+
                 modalTitle.innerHTML = `
                     <div class="flex items-center gap-3">
                         <i class="fab fa-leetcode text-orange-500 text-xl"></i>
                         <div class="-mt-1">
                             <h3 class="modal-title">LeetCode Stats</h3>
                             <a href="https://leetcode.com/Mubasshir_Khan" target="_blank" 
-                               class="text-xs text-accent hover:underline flex items-center gap-1">
+                            class="text-xs text-accent hover:underline flex items-center gap-1">
                                 @Mubasshir_Khan <i class="fas fa-external-link-alt text-xs"></i>
                             </a>
                         </div>
@@ -137,93 +151,99 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                     </div>
                 `;
-            
+
+                const renderLeetCodeStats = (data) => {
+                    document.querySelector(".leetcode-stats-container").innerHTML = `
+                        <!-- Horizontal Stats Row -->
+                        <div class="flex items-center justify-between bg-gray-800/50 p-4 rounded-lg mb-6">
+                            <div class="text-center px-2">
+                                <div class="text-2xl font-bold">${data.totalSolved}</div>
+                                <div class="text-xs opacity-80 uppercase tracking-wider">Solved</div>
+                            </div>
+                            
+                            <div class="h-12 w-px bg-gray-600"></div>
+                            
+                            <div class="text-center px-2">
+                                <div class="text-2xl font-bold">${Math.round(data.acceptanceRate)}%</div>
+                                <div class="text-xs opacity-80 uppercase tracking-wider">Accuracy</div>
+                            </div>
+                            
+                            <div class="h-12 w-px bg-gray-600"></div>
+                            
+                            <div class="text-center px-2">
+                                <div class="text-2xl font-bold">${data.ranking ? data.ranking.toLocaleString() : "N/A"}</div>
+                                <div class="text-xs opacity-80 uppercase tracking-wider">Ranking</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Difficulty Breakdown -->
+                        <div class="leetcode-section">
+                            <h4 class="leetcode-section-title">
+                                <i class="fas fa-layer-group text-accent"></i>
+                                Problem Breakdown
+                            </h4>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="leetcode-difficulty-card difficulty-easy">
+                                    <div class="difficulty-label">Easy</div>
+                                    <div class="difficulty-value">${data.easySolved}</div>
+                                    <div class="difficulty-bar">
+                                        <div class="difficulty-progress" style="width: ${(data.easySolved/data.totalSolved)*100}%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="leetcode-difficulty-card difficulty-medium">
+                                    <div class="difficulty-label">Medium</div>
+                                    <div class="difficulty-value">${data.mediumSolved}</div>
+                                    <div class="difficulty-bar">
+                                        <div class="difficulty-progress" style="width: ${(data.mediumSolved/data.totalSolved)*100}%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="leetcode-difficulty-card difficulty-hard">
+                                    <div class="difficulty-label">Hard</div>
+                                    <div class="difficulty-value">${data.hardSolved}</div>
+                                    <div class="difficulty-bar">
+                                        <div class="difficulty-progress" style="width: ${(data.hardSolved/data.totalSolved)*100}%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Badges Section -->
+                        <div class="leetcode-section">
+                            <h4 class="leetcode-section-title">
+                                <i class="fas fa-award text-accent"></i>
+                                Badges
+                            </h4>
+                            <div class="flex justify-center py-4">
+                                <img src="images/batches.jpg" 
+                                    alt="LeetCode Badges" 
+                                    class="leetcode-badge-image rounded-lg border border-accent/20">
+                            </div>
+                        </div>
+                    `;
+                };
+
+                // Try to fetch real data first
                 fetch("https://leetcode-stats-api.herokuapp.com/Mubasshir_Khan")
                     .then(res => res.json())
                     .then(data => {
-                        document.querySelector(".leetcode-stats-container").innerHTML = `
-                            <!-- Horizontal Stats Row -->
-                            <div class="flex items-center justify-between bg-gray-800/50 p-4 rounded-lg mb-6">
-                                <div class="text-center px-2">
-                                    <div class="text-2xl font-bold">${data.totalSolved}</div>
-                                    <div class="text-xs opacity-80 uppercase tracking-wider">Solved</div>
-                                </div>
-                                
-                                <div class="h-12 w-px bg-gray-600"></div>
-                                
-                                <div class="text-center px-2">
-                                    <div class="text-2xl font-bold">${Math.round(data.acceptanceRate)}%</div>
-                                    <div class="text-xs opacity-80 uppercase tracking-wider">Accuracy</div>
-                                </div>
-                                
-                                <div class="h-12 w-px bg-gray-600"></div>
-                                
-                                <div class="text-center px-2">
-                                    <div class="text-2xl font-bold">${data.ranking ? data.ranking.toLocaleString() : "N/A"}</div>
-                                    <div class="text-xs opacity-80 uppercase tracking-wider">Ranking</div>
-                                </div>
-                            </div>
-                            
-                            <!-- Difficulty Breakdown -->
-                            <div class="leetcode-section">
-                                <h4 class="leetcode-section-title">
-                                    <i class="fas fa-layer-group text-accent"></i>
-                                    Problem Breakdown
-                                </h4>
-                                <div class="grid grid-cols-3 gap-3">
-                                    <div class="leetcode-difficulty-card difficulty-easy">
-                                        <div class="difficulty-label">Easy</div>
-                                        <div class="difficulty-value">${data.easySolved}</div>
-                                        <div class="difficulty-bar">
-                                            <div class="difficulty-progress" style="width: ${(data.easySolved/data.totalSolved)*100}%"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="leetcode-difficulty-card difficulty-medium">
-                                        <div class="difficulty-label">Medium</div>
-                                        <div class="difficulty-value">${data.mediumSolved}</div>
-                                        <div class="difficulty-bar">
-                                            <div class="difficulty-progress" style="width: ${(data.mediumSolved/data.totalSolved)*100}%"></div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="leetcode-difficulty-card difficulty-hard">
-                                        <div class="difficulty-label">Hard</div>
-                                        <div class="difficulty-value">${data.hardSolved}</div>
-                                        <div class="difficulty-bar">
-                                            <div class="difficulty-progress" style="width: ${(data.hardSolved/data.totalSolved)*100}%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Badges Section -->
-                            <div class="leetcode-section">
-                                <h4 class="leetcode-section-title">
-                                    <i class="fas fa-award text-accent"></i>
-                                    Badges
-                                </h4>
-                                <div class="flex justify-center py-4">
-                                    <img src="images/batches.jpg" 
-                                         alt="LeetCode Badges" 
-                                         class="leetcode-badge-image rounded-lg border border-accent/20">
-                                </div>
-                            </div>
-                            
-                        `;
+                        // Use real data if available
+                        if (data.status !== "success" || !data.totalSolved) {
+                            throw new Error("Invalid data received");
+                        }
+                        renderLeetCodeStats(data);
                     })
                     .catch(error => {
-                        document.querySelector(".leetcode-stats-container").innerHTML = `
-                            <div class="leetcode-error">
-                                <i class="fas fa-exclamation-triangle text-3xl text-red-400"></i>
-                                <h4>Data Loading Failed</h4>
-                                <p>Couldn't fetch LeetCode stats. Please try again later.</p>
-                                <a href="https://leetcode.com/Mubasshir_Khan" target="_blank" 
-                                   class="leetcode-view-more-btn mt-3">
-                                    View Profile Directly
-                                </a>
-                            </div>
-                        `;
+                        console.log("Using manual data due to error:", error);
+                        // Fall back to manual data
+                        renderLeetCodeStats(manualData);
+                        
+                        // Show small notice about using cached data
+                        const notice = document.createElement('div');
+                        notice.className = 'text-center text-xs text-gray-400 mt-2';
+                        notice.innerHTML = '<i class="fas fa-info-circle"></i> Showing cached data';
+                        document.querySelector(".leetcode-stats-container").appendChild(notice);
                     });
                 break;
 
