@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             case 'resume':
                 modalTitle.textContent = 'Resume';
-                modalBody.innerHTML = '<a href="resume.pdf" target="_blank" class="btn">View My Resume</a>';
+                modalBody.innerHTML = '<a href="https://drive.google.com/file/d/1e1LXYLWV23lX56frrNI4wPBPOelYaRdt/view?usp=sharing" target="_blank" class="btn">View My Resume</a>';
                 break;
             default:
                 modalTitle.textContent = 'More Info';
