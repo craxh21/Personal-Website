@@ -13,7 +13,7 @@
 }
 
 .about-section h2 {
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     font-size: 2.5rem;
     font-weight: bold;
     color:rgb(2, 78, 34)
@@ -57,6 +57,52 @@
     font-size: 3rem; /* Bigger icons */
     color: var(--accent-color);
 }
+
+
+
+
+/* teckstack card */
+.tech-categories {
+    padding: 10px;
+    font-family: inherit;
+    height: auto;
+}
+
+.tech-categories h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: var(--accent-color); /* or any bright color */
+}
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.badge {
+    background: rgba(0, 91, 44, 0.3);
+    color: white;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--accent-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background: var(--accent-color);
+    color: black;
+    transform: scale(1.05);
+}
+
+
+
 
 /* LeetCode Card Styles */
 .leetcode-stats-container {

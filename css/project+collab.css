@@ -1,0 +1,344 @@
+/* Projects Section */
+.project-section {
+    background: rgba(0, 91, 44, 0.3);
+    color: white;
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-bottom: 4px solid var(--accent-color); */
+    border-bottom: 5px dashed var(--accent-color);
+}
+.project-section h2 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:rgb(2, 78, 34)
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* New wrapper element */
+.project-card-wrapper {
+    text-decoration: none;
+    display: block;
+}
+
+/* Modified project card styles */
+.project-card {
+    background: rgba(0, 51, 25, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    padding: 0 20px; /* Adjust padding for better control */
+    cursor: pointer;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    height: 180px; /* Reduced height */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 15px 20px; /* Reduced padding */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    color: var(--accent-color);
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+.project-info p {
+    color: var(--text-light-blue);
+    margin-bottom: 12px; /* Reduced margin */
+    flex-grow: 1;
+}
+
+/* Tech stack styles */
+.project-card-tech-stack {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-card-tech-stack span {
+    background: rgba(0, 91, 44, 0.2);
+    color: var(--accent-color);
+    padding: 3px 6px;  /* Reduced padding */
+    border-radius: 12px;
+    font-size: 0.75rem; /* Slightly smaller font */
+    border: 1px solid var(--accent-color);
+}
+
+/* GitHub link styles */
+.project-card-github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-color);
+    font-size: 0.85rem; /* Slightly smaller font */
+    margin-top: 15px;
+    padding: 5px 10px; /* Reduced padding */
+    border-radius: 20px;
+    background: rgba(0, 91, 44, 0.1);
+    transition: all 0.3s ease;
+    align-self: flex-start; /* Align to left */
+}
+
+.project-card:hover .github-link {
+    background: rgba(0, 91, 44, 0.3);
+    color: white;
+}
+
+.project-card-github-link i {
+    font-size: 1.1rem;
+}
+
+/* Projects Section Heading Alignment */
+.github-more-wrapper {
+    position: relative; /* Needed for absolute child positioning */
+    text-align: center; /* Centers the heading */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px; /* Centers the container */
+    padding: 0 20px; /* Prevents button overlap on small screens */
+}
+
+.github-more-wrapper h2 {
+    margin: 0 auto; /* Centers the heading */
+    display: inline-block; /* Allows centering */
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(2, 78, 34);
+}
+
+/* GitHub Button - Positioned absolutely */
+.github-more-btn {
+    position: absolute;
+    right: 40px; /* Aligns to right with padding */
+    top: 50%;
+    transform: translateY(-50%); /* Perfect vertical centering */
+    margin: 0; /* Remove all margins */
+    float: none; /* Remove float */
+    /* Keep other button styles */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: rgba(10, 25, 47, 0.7);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.github-more-btn:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateY(-50%) scale(1.02); /* Maintain vertical centering */
+    box-shadow: 0 4px 8px rgba(100, 255, 218, 0.2);
+}
+
+.github-more-btn i {
+    font-size: 1.1rem;
+}
+
+/* Clearfix for the container (if needed) */
+.projects-grid::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Collaboration Section - Magical Theme */
+.collab-invite {
+    margin: 80px auto;
+    perspective: 1000px;
+    max-width: 900px;
+}
+
+.collab-card {
+    background: linear-gradient(145deg, rgba(0,91,44,0.8), rgba(0,51,25,0.9));
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.collab-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+}
+
+.collab-header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.collab-icon {
+    font-size: 3.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.collab-card:hover .collab-icon {
+    transform: scale(1.1) rotate(15deg);
+}
+
+.collab-header h3 {
+    color: var(--accent-color);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-family: 'Pacifico', cursive;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.tagline {
+    color: var(--text-light-blue);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.collab-perks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.perk {
+    background: rgba(0, 51, 25, 0.4);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(248, 165, 11, 0.3);
+    transition: all 0.3s ease;
+}
+
+.perk:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 51, 25, 0.6);
+    border-color: var(--accent-color);
+}
+
+.perk i {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.perk h4 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.perk p {
+    color: var(--text-light-blue);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.cta-box {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cta-box p {
+    color: var(--text-light-blue);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent-color);
+    color: var(--primary-dark);
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(248, 165, 11, 0.3);
+}
+
+.cta-btn:hover {
+    background: var(--light-accent);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(248, 165, 11, 0.5);
+}
+
+.sparkle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at center, 
+        rgba(248, 165, 11, 0.1) 0%, 
+        transparent 70%);
+    animation: sparkle 4s infinite alternate;
+}
+
+@keyframes sparkle {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.8; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .collab-perks {
+        grid-template-columns: 1fr;
+    }
+    .collab-header h3 {
+        font-size: 1.8rem;
+    }
+}
